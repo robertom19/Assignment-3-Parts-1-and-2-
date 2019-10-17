@@ -1,0 +1,55 @@
+//PART 1
+
+/* 
+Create a base class Fruit which has name (String), taste (String), 
+and size (double) as its attributes. 
+Its constructor should only take the correct type for each attribute. 
+*/
+
+public class Fruit {
+    
+    String name;
+    String taste;
+    double size;
+    Fruit(String n, String t, double s){
+        name = n;
+        taste = t;
+        size = s;
+    
+    }
+    
+/* A method called eat() is created which describes the name of the fruit and its taste. */ 
+    
+    void eat(){
+        System.out.println(name+" tastes like "+taste);    
+    }
+
+}
+
+/* 
+Inherit the same in 2 other class Apple and Orange 
+and override the eat() method to represent each fruit taste.
+*/
+
+class Orange extends Fruit{
+    Orange(String n, String t, double s){
+        super(n, t, s);   
+    }
+    
+    @Override
+    void eat(){
+        System.out.println(name+" tastes like "+taste);
+    }   
+}
+
+
+class Apple extends Fruit{
+    Apple(String n, String t, double s){
+        super(n, t, s);   
+    }
+    
+    @Override
+    void eat(){
+        System.out.println(name+" tastes like "+taste);
+    }  
+}
